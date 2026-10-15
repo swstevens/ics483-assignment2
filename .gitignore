@@ -1,0 +1,24 @@
+# macOS zip artifacts
+__MACOSX/
+.DS_Store
+._*
+
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Generated output from harrisScript.py
+python/harris_intermediate.png
+python/harris_corners.png
+
+# Editors / IDEs
+.vscode/
+.idea/
+*.swp
+*~
