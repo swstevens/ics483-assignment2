@@ -29,7 +29,7 @@ gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 sigma = 1.5
 k = 0.04
 thresholdRel = 0.01
-nmsSize = 7
+nmsSize = 33
 
 imgx, imgy = myImageGradient(gray)
 R, Sxx, Syy, Sxy = myHarrisResponse(imgx, imgy, sigma, k)

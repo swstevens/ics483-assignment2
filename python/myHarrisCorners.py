@@ -21,9 +21,16 @@ def myHarrisCorners(R, thresholdRel=0.01, nmsSize=7):
     """
     R = np.asarray(R, dtype=np.float64)
 
-    # TODO: threshold R and apply non-maximum suppression.
-    # You may use scipy.ndimage.maximum_filter.
-    # Return an N x 2 array in [x, y] order.
-    corners = None
+    peak = np.max(R)
+    minheight = thresholdRel*peak
+
+    strong = R > minheight
+
+    supmax = maximum_filter(R, nmsSize)
+    peaks = R == supmax
+
+    corners = np.argwhere(strong & peaks)[:, ::-1]
+
+
 
     return corners
